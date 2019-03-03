@@ -371,7 +371,7 @@ func main() {
 		playAudio(audioFile)
 
 		// remove ogg file
-		//os.Remove(audioFile)
+		os.Remove(audioFile)
 	}
 
 	return
