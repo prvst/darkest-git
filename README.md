@@ -1,4 +1,5 @@
 # Darkest-Git
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/pvrst)
 
 ![Darkest-Dungeon](https://upload.wikimedia.org/wikipedia/en/8/8d/Darkest_Dungeon_Logo.png)
 
@@ -23,12 +24,3 @@ I like Git and I like Darkest Dungeon.
 
 # How to Colaborate
 Feel free to fork the project and add your share.
-
-
-# Like it ? Buy me ~Beer~ Diaper (I'm a dad now!)
-
-[Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A26XVN43JQLRE&currency_code=USD&source=url)
-
-[BTC] 16a3V62EuN8mL5ZsxxYi23QjGYC9j1DFjU
-
-[BCH] qqsyt5gwke9avg7f554a7xt98cpye0ettgu3mppt3h
