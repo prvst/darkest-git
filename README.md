@@ -7,7 +7,7 @@ Darkest-Git is a simple wrapper that includes quotes from the Darkest Dungeon Na
 
 
 # Compatibility
-The binary available was compiled to GNU/Linux, but you can download the source code and run `go build darkest-dungeon` and compile a version for your OS.
+The binary available was compiled to Windows and GNU/Linux, but you can download the source code and run `go build darkest-dungeon` and compile a version for your OS.
 
 
 # Download
