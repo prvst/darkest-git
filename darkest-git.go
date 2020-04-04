@@ -221,7 +221,6 @@ func downloadFromUrl(url, name string) {
 
 	// Write the body to file
 	_, err = io.Copy(out, resp.Body)
-	return
 
 	return
 }
@@ -260,100 +259,102 @@ func main() {
 
 	rand.Seed(time.Now().UnixNano())
 
-	// get the file name and build the url path
-	if strings.Contains(args[1], "config") {
+	if len(args) > 1 {
+		// get the file name and build the url path
+		if strings.Contains(args[1], "config") {
 
-		index = rand.Intn(len(quoteConfigAudio))
-		name = strings.Split(quoteConfigAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quoteConfigAudio[index])
-		text = quoteConfigText[index]
+			index = rand.Intn(len(quoteConfigAudio))
+			name = strings.Split(quoteConfigAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quoteConfigAudio[index])
+			text = quoteConfigText[index]
 
-	} else if strings.Contains(args[1], "init") {
+		} else if strings.Contains(args[1], "init") {
 
-		index = rand.Intn(len(quoteInitAudio))
-		name = strings.Split(quoteInitAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quoteInitAudio[index])
-		text = quoteInitText[index]
+			index = rand.Intn(len(quoteInitAudio))
+			name = strings.Split(quoteInitAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quoteInitAudio[index])
+			text = quoteInitText[index]
 
-	} else if strings.Contains(args[1], "add") {
+		} else if strings.Contains(args[1], "add") {
 
-		index = rand.Intn(len(quoteAddAudio))
-		name = strings.Split(quoteAddAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quoteAddAudio[index])
-		text = quoteAddText[index]
+			index = rand.Intn(len(quoteAddAudio))
+			name = strings.Split(quoteAddAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quoteAddAudio[index])
+			text = quoteAddText[index]
 
-	} else if strings.Contains(args[1], "commit") {
+		} else if strings.Contains(args[1], "commit") {
 
-		index = rand.Intn(len(quoteCommitAudio))
-		name = strings.Split(quoteCommitAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quoteCommitAudio[index])
-		text = quoteCommitText[index]
+			index = rand.Intn(len(quoteCommitAudio))
+			name = strings.Split(quoteCommitAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quoteCommitAudio[index])
+			text = quoteCommitText[index]
 
-	} else if strings.Contains(args[1], "rm") {
+		} else if strings.Contains(args[1], "rm") {
 
-		index = rand.Intn(len(quoteRmAudio))
-		name = strings.Split(quoteRmAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quoteRmAudio[index])
-		text = quoteRmText[index]
+			index = rand.Intn(len(quoteRmAudio))
+			name = strings.Split(quoteRmAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quoteRmAudio[index])
+			text = quoteRmText[index]
 
-	} else if strings.Contains(args[1], "log") {
+		} else if strings.Contains(args[1], "log") {
 
-		index = rand.Intn(len(quoteLogAudio))
-		name = strings.Split(quoteLogAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quoteLogAudio[index])
-		text = quoteLogText[index]
+			index = rand.Intn(len(quoteLogAudio))
+			name = strings.Split(quoteLogAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quoteLogAudio[index])
+			text = quoteLogText[index]
 
-	} else if strings.Contains(args[1], "reset") {
+		} else if strings.Contains(args[1], "reset") {
 
-		index = rand.Intn(len(quoteResetAudio))
-		name = strings.Split(quoteResetAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quoteResetAudio[index])
-		text = quoteResetText[index]
+			index = rand.Intn(len(quoteResetAudio))
+			name = strings.Split(quoteResetAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quoteResetAudio[index])
+			text = quoteResetText[index]
 
-	} else if strings.Contains(args[1], "show") {
+		} else if strings.Contains(args[1], "show") {
 
-		index = rand.Intn(len(quoteShowAudio))
-		name = strings.Split(quoteShowAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quoteShowAudio[index])
-		text = quoteShowText[index]
+			index = rand.Intn(len(quoteShowAudio))
+			name = strings.Split(quoteShowAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quoteShowAudio[index])
+			text = quoteShowText[index]
 
-	} else if strings.Contains(args[1], "merge") {
+		} else if strings.Contains(args[1], "merge") {
 
-		index = rand.Intn(len(quoteMergeAudio))
-		name = strings.Split(quoteMergeAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quoteMergeAudio[index])
-		text = quoteMergeText[index]
+			index = rand.Intn(len(quoteMergeAudio))
+			name = strings.Split(quoteMergeAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quoteMergeAudio[index])
+			text = quoteMergeText[index]
 
-	} else if strings.Contains(args[1], "checkout") {
+		} else if strings.Contains(args[1], "checkout") {
 
-		index = rand.Intn(len(quoteCheckoutAudio))
-		name = strings.Split(quoteCheckoutAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quoteCheckoutAudio[index])
-		text = quoteCheckoutText[index]
+			index = rand.Intn(len(quoteCheckoutAudio))
+			name = strings.Split(quoteCheckoutAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quoteCheckoutAudio[index])
+			text = quoteCheckoutText[index]
 
-	} else if strings.Contains(args[1], "stash") {
+		} else if strings.Contains(args[1], "stash") {
 
-		index = rand.Intn(len(quoteStashAudio))
-		name = strings.Split(quoteStashAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quoteStashAudio[index])
-		text = quoteStashText[index]
+			index = rand.Intn(len(quoteStashAudio))
+			name = strings.Split(quoteStashAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quoteStashAudio[index])
+			text = quoteStashText[index]
 
-	} else if strings.Contains(args[1], "push") {
+		} else if strings.Contains(args[1], "push") {
 
-		index = rand.Intn(len(quotePushAudio))
-		name = strings.Split(quotePushAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quotePushAudio[index])
-		text = quotePushText[index]
+			index = rand.Intn(len(quotePushAudio))
+			name = strings.Split(quotePushAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quotePushAudio[index])
+			text = quotePushText[index]
 
-	} else if strings.Contains(args[1], "pull") {
+		} else if strings.Contains(args[1], "pull") {
 
-		index = rand.Intn(len(quotePullAudio))
-		name = strings.Split(quotePullAudio[index], "/")
-		url = fmt.Sprintf("%s%s", baseURl, quotePullAudio[index])
-		text = quotePullText[index]
+			index = rand.Intn(len(quotePullAudio))
+			name = strings.Split(quotePullAudio[index], "/")
+			url = fmt.Sprintf("%s%s", baseURl, quotePullAudio[index])
+			text = quotePullText[index]
 
-	} else {
-		//os.Exit(1)
+		} else {
+			//os.Exit(1)
+		}
 	}
 
 	// locate the temp folder and build the full qualified name of the audio file
